@@ -15,9 +15,11 @@ public struct LottieView: UIViewRepresentable {
         let view = UIView()
         animationView.contentMode = .scaleAspectFit
         
+        animationView.loopMode = .loop
         animationView.play()
+    
         animationView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         view.addSubview(animationView)
         NSLayoutConstraint.activate([
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor),

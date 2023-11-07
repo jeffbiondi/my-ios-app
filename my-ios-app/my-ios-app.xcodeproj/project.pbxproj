@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		632B12452AFA4C3100AC324F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632B12442AFA4C3100AC324F /* Launch Screen.storyboard */; };
 		632B12482AFA753E00AC324F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 632B12472AFA753E00AC324F /* Lottie */; };
-		632B124A2AFA766B00AC324F /* earth_animated.json in Resources */ = {isa = PBXBuildFile; fileRef = 632B12492AFA766B00AC324F /* earth_animated.json */; };
 		632B124C2AFA76FC00AC324F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632B124B2AFA76FC00AC324F /* LottieView.swift */; };
-		632B124E2AFA7AC500AC324F /* earth_spinning.json in Resources */ = {isa = PBXBuildFile; fileRef = 632B124D2AFA7AC500AC324F /* earth_spinning.json */; };
+		632B12502AFA96DF00AC324F /* earth_spinning_white.json in Resources */ = {isa = PBXBuildFile; fileRef = 632B124F2AFA96DF00AC324F /* earth_spinning_white.json */; };
+		632B12522AFA9C3800AC324F /* earth_spin_white.json in Resources */ = {isa = PBXBuildFile; fileRef = 632B12512AFA9C3800AC324F /* earth_spin_white.json */; };
 		79DB31E12AFA47D2006DB80F /* my_ios_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31E02AFA47D2006DB80F /* my_ios_appApp.swift */; };
 		79DB31E32AFA47D2006DB80F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31E22AFA47D2006DB80F /* ContentView.swift */; };
 		79DB31E52AFA47D2006DB80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DB31E42AFA47D2006DB80F /* Assets.xcassets */; };
@@ -42,9 +42,9 @@
 
 /* Begin PBXFileReference section */
 		632B12442AFA4C3100AC324F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		632B12492AFA766B00AC324F /* earth_animated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth_animated.json; sourceTree = "<group>"; };
 		632B124B2AFA76FC00AC324F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		632B124D2AFA7AC500AC324F /* earth_spinning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth_spinning.json; sourceTree = "<group>"; };
+		632B124F2AFA96DF00AC324F /* earth_spinning_white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth_spinning_white.json; sourceTree = "<group>"; };
+		632B12512AFA9C3800AC324F /* earth_spin_white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth_spin_white.json; sourceTree = "<group>"; };
 		79DB31DD2AFA47D2006DB80F /* my-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DB31E02AFA47D2006DB80F /* my_ios_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_ios_appApp.swift; sourceTree = "<group>"; };
 		79DB31E22AFA47D2006DB80F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				632B124B2AFA76FC00AC324F /* LottieView.swift */,
 				79DB320E2AFA4BCB006DB80F /* ProductsView.swift */,
 				79DB320C2AFA4BB5006DB80F /* ProductDetailsView.swift */,
-				632B124D2AFA7AC500AC324F /* earth_spinning.json */,
-				632B12492AFA766B00AC324F /* earth_animated.json */,
+				632B12512AFA9C3800AC324F /* earth_spin_white.json */,
+				632B124F2AFA96DF00AC324F /* earth_spinning_white.json */,
 				79DB31E42AFA47D2006DB80F /* Assets.xcassets */,
 				79DB31E62AFA47D2006DB80F /* Preview Content */,
 			);
@@ -257,9 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632B124A2AFA766B00AC324F /* earth_animated.json in Resources */,
+				632B12522AFA9C3800AC324F /* earth_spin_white.json in Resources */,
 				632B12452AFA4C3100AC324F /* Launch Screen.storyboard in Resources */,
-				632B124E2AFA7AC500AC324F /* earth_spinning.json in Resources */,
+				632B12502AFA96DF00AC324F /* earth_spinning_white.json in Resources */,
 				79DB31E82AFA47D2006DB80F /* Preview Assets.xcassets in Resources */,
 				79DB31E52AFA47D2006DB80F /* Assets.xcassets in Resources */,
 			);
