@@ -113,7 +113,7 @@ struct ProductsView: View {
             }
             Spacer()
             .navigationTitle("Product List")
-        }.background(Color(UIColor(hex:"AD62F0")))
+        }.padding(.top, 100).background(Color(UIColor(hex:"AD62F0"))).edgesIgnoringSafeArea(.all)
     }
 }
 
