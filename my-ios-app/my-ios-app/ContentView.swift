@@ -6,25 +6,48 @@
 //
 
 import SwiftUI
-
+import Lottie
 
 struct ContentView: View {
     var body: some View {
         NavigationView {
             NavigationLink(destination: ProductsView()) {
-                VStack {
-                    Image(systemName: "globe.americas")
-                        .font(.system(size:100))
-                        .foregroundColor(.green)
-                    Text("Do you want to see my products?")
+                VStack() {
+                    Text("Engage with Us")
+                        .frame(height: 100)
+//                        .border(.red)
                         .font(.system(size:24, weight: .bold))
-                        .foregroundColor(.green)
+                        .foregroundColor(.black)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        HStack {
+                            LottieView(animationView:
+                                        LottieAnimationView(name: "earth_spinning"), loopMode: .loop)
+                            .frame(width: 150, height: 150)
+                        }
+                        
+                        Text("Do you want to see my products?")
+                            .font(.system(size:24, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(30)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.green.cornerRadius(15)
+                        .shadow(radius: 5))
+                    .padding()
+                    
                 }
+//                .border(.red)
             }
-            .navigationBarTitle("Engage App")
-            .foregroundColor(.green)
+//            .border(.yellow)
+            //            .navigationBarTitle("")
+                .foregroundColor(.green)
+            Spacer()
         }
-        .padding()
+        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarHidden(true)
+//        .border(.blue)
     }
 }
 
@@ -33,3 +56,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
