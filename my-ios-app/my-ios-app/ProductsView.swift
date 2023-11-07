@@ -8,14 +8,14 @@
 import SwiftUI
 struct ProductBlockView: View {
     @StateObject var ProductViewModel: ProductViewModel
-
+    
     var body: some View {
         NavigationLink(destination: ProductDetailsView(productCode: ProductViewModel.productCode, imageName: ProductViewModel.imageName)) {
             VStack {
                 Image(ProductViewModel.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 120, height: 120)
                 Text(ProductViewModel.title)
                     .font(.headline)
                     .padding(.top, 8)
@@ -25,8 +25,8 @@ struct ProductBlockView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(10)
-        .shadow(radius: 5)
-        .padding(.trailing, 8)
+        .shadow(color: .gray, radius: 5)
+        .padding()
         .opacity(ProductViewModel.isVisible ? 1.0 : 0.0)
         //.opacity(ProductViewModel.isVisible ? 1.0 : 0.0)
     }
@@ -100,7 +100,7 @@ struct ProductsView: View {
       
        
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]) {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 0), GridItem(.flexible(), spacing: 0)]) {
                 ForEach(products) { product in ProductBlockView(ProductViewModel: product)
                         .onAppear {
 
@@ -113,7 +113,7 @@ struct ProductsView: View {
             }
             Spacer()
             .navigationTitle("Product List")
-        }
+        }.background(Color(UIColor(hex:"AD62F0")))
     }
 }
 
@@ -123,3 +123,15 @@ struct ProductsView_Previews: PreviewProvider {
     }
 }
 
+extension UIColor {
+  convenience init(hex: String) {
+    var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+    hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+    var rgb: UInt64 = 0
+    Scanner(string: hexSanitized).scanHexInt64(&rgb)
+    let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+    let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+    let blue = CGFloat(rgb & 0x0000FF) / 255.0
+    self.init(red: red, green: green, blue: blue, alpha: 1.0)
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Apple-MacBook-Pro-14-512-Go-D-16-Go-RAM-Puce-M2-Pro-CPU-10-coeurs-GPU-16-coeurs-Gris-sideral-Nouveau.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
