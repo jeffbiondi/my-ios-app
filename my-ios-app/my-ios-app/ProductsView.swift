@@ -9,17 +9,20 @@ import SwiftUI
 struct ProductBlockView: View {
     var imageName: String
     var title: String
+    var productCode: String
 
     var body: some View {
-        VStack {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
+        NavigationLink(destination: ProductDetailsView(productCode: productCode, imageName: imageName)) {
+            VStack {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
 
-            Text(title)
-                .font(.headline)
-                .padding(.top, 8)
+                Text(title)
+                    .font(.headline)
+                    .padding(.top, 8)
+            }
         }
         .padding()
         .background(Color.white)
@@ -33,10 +36,20 @@ struct ProductsView: View {
         VStack {
             Text("Hello, world!")
             HStack {
-                ProductBlockView(imageName: "iphone", title: "iPhone X")
-                ProductBlockView(imageName: "ipad", title: "iPad Pro")
+                ProductBlockView(
+                    imageName: "iphone",
+                    title: "iPhone X",
+                    productCode: "iphone-x"
+                )
+
+                ProductBlockView(
+                    imageName: "ipad",
+                    title: "iPad Pro",
+                    productCode: "ipad-pro"
+                )
                 // Add more ProductBlockViews as needed
             }
+            .navigationTitle("Product List")
         }
     }
 }
@@ -47,30 +60,3 @@ struct ProductsView_Previews: PreviewProvider {
     }
 }
 
-
-/*
-struct ProductBlockView: View {
-    var body: some View {
-        NavigationView{
-            NavigationLink {
-                ProductBlockView()
-            } label: {
-                VStack {
-                    Image("iphone") // Replace "iphone" with the name of your image asset
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100) // Adjust the size as needed
-
-                    Text("iPhone X") // Replace "iPhone X" with your product title
-                        .font(.headline)
-                        .padding(.top, 8)
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-            }
-        }
-        
-    }
-} */
