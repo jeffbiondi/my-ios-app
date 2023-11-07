@@ -23,12 +23,17 @@ struct ProductDetailsItemView: View {
         }
         .padding()
         .background(Color.green)
+        .foregroundColor(.white)
     }
 }
 
 struct CarbonFootprint: View {
     var body: some View {
         VStack {
+            Image("carbonbanner")
+                .resizable()
+                .frame(width: .infinity, height: 100)
+
             Text("90% better than new")
                 .font(.system(size: 50))
                 .padding()
@@ -39,21 +44,36 @@ struct CarbonFootprint: View {
             Text("Refurbished: 15.7 kg of CO2")
                 .font(.title)
                 .padding()
+            
+            Image("ewaste")
+                .resizable()
+
+            
+            Spacer()
         }
+        .foregroundColor(.white)
     }
 }
 
 struct EWaste: View {
     var body: some View {
         VStack {
-            Text("A single refurbished smartphone prevents 6.29 oz (178.2 g) of e-waste")
+            Image("ewastebanner")
+                .resizable()
+                .frame(width: .infinity, height: 100)
+
+
+            Text("You prevented 178.2g of e-waste")
                 .padding()
                 .font(.system(size: 50))
             
             Text("Each brand new smartphone generates about 7.06 oz (200.2 g) of e-waste. A refurbished smartphone, just 0.78 oz (22 g) — that’s 89% less!")
                 .padding()
                 .font(.title)
+
+            Spacer()
         }
+        .foregroundColor(.white)
     }
 }
 
