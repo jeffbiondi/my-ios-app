@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct ProductDetailsView: View {
+    var productCode: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("iphone") // Replace "iphone" with the name of your image asset
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100, height: 100) // Adjust the size as needed
+
+            Text(productCode)
+                .font(.headline)
+                .padding(.top, 8)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
     }
 }
 
 struct ProductDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailsView()
+        ProductDetailsView(productCode: "iPhone14 Salade Tomate")
     }
 }
