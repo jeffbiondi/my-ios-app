@@ -13,14 +13,16 @@ struct ContentView: View {
         NavigationView {
             NavigationLink(destination: ProductsView()) {
                 VStack {
-                    
                     Image(systemName: "globe.americas")
-                        .imageScale(.large)
-                        .foregroundColor(.accentColor)
+                        .font(.system(size:100))
+                        .foregroundColor(.green)
                     Text("Do you want to see my products?")
+                        .font(.system(size:24, weight: .bold))
+                        .foregroundColor(.green)
                 }
             }
-            .navigationBarTitle("First Screen")
+            .navigationBarTitle("Engage App")
+            .foregroundColor(.green)
         }
         .padding()
     }
