@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ProductDetailsView: View {
     var productCode: String
+    var imageName: String
     var body: some View {
         VStack {
-            Image("iphone") // Replace "iphone" with the name of your image asset
+            Text("My Product Details")
+            Image(imageName) // Replace "iphone" with the name of your image asset
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100) // Adjust the size as needed
@@ -29,6 +31,6 @@ struct ProductDetailsView: View {
 
 struct ProductDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailsView(productCode: "iPhone14 Salade Tomate")
+        ProductDetailsView(productCode: "iPhone14 Salade Tomate", imageName: "iphone")
     }
 }
