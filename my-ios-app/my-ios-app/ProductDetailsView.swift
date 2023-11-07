@@ -28,17 +28,32 @@ struct ProductDetailsItemView: View {
 
 struct CarbonFootprint: View {
     var body: some View {
-        Text("90% better than new")
-            .font(.largeTitle)
-        
+        VStack {
+            Text("90% better than new")
+                .font(.system(size: 50))
+                .padding()
+            
+            Text("NEW: 72 kg of CO2")
+                .font(.title)
+                .padding()
+            Text("Refurbished: 15.7 kg of CO2")
+                .font(.title)
+                .padding()
+        }
     }
 }
 
 struct EWaste: View {
     var body: some View {
-        Text("190g of eWaste gained")
-            .font(.largeTitle)
-        
+        VStack {
+            Text("A single refurbished smartphone prevents 6.29 oz (178.2 g) of e-waste")
+                .padding()
+                .font(.system(size: 50))
+            
+            Text("Each brand new smartphone generates about 7.06 oz (200.2 g) of e-waste. A refurbished smartphone, just 0.78 oz (22 g) — that’s 89% less!")
+                .padding()
+                .font(.title)
+        }
     }
 }
 
