@@ -10,12 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Text("C'est sympa!")
+        NavigationView {
+            NavigationLink(destination: ProductsView()) {
+                VStack {
+                    
+                    Image(systemName: "globe.americas")
+                        .imageScale(.large)
+                        .foregroundColor(.accentColor)
+                    Text("Do you want to see my products?")
+                }
+            }
+            .navigationBarTitle("First Screen")
         }
         .padding()
     }
